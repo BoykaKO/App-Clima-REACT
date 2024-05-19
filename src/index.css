@@ -1,0 +1,122 @@
+* {
+  --backgroundColor: #222831;
+  --divSeleccionado: #00ADB5;
+  --div: #00FFF5;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+h1 {
+  text-align: center;
+  color: aliceblue;
+}
+
+.formulario {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+  background-color: var(--backgroundColor);
+  border-radius: 20px;
+  border: 3px outset var(--backgroundColor);
+}
+
+.buscador {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 1.2em;
+}
+
+.buscador:focus {
+  outline: none;
+  box-shadow: 0px 1px 20px 2px var(--div);
+  border: 1px solid var(--divSeleccionado);
+  background-color: var(--backgroundColor);
+  color: aliceblue;
+  transition-duration: 0.2s;
+}
+
+button {
+  margin: 10px;
+  border-radius: 10px;
+  background-color: var(--div);
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  width: 20%;
+  border: 1px outset var(--backgroundColor);
+}
+
+button:active {
+  border: 1px inset var(--div);
+  background-color: var(--divSeleccionado);
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+
+.containerResults {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--div);
+  border-radius: 20px;
+  border: 5px inset var(--backgroundColor);
+}
+
+h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+img {
+  width: 25%;
+  contain: cover;
+  margin: 0 auto;
+
+}
+
+.containerError {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(208, 63, 63);
+  border-radius: 20px;
+  border: 5px inset var(--backgroundColor);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media (max-width:421px) {
+
+  .formulario {
+    width: 80%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+    background-color: var(--backgroundColor);
+    border-radius: 20px;
+    border: 3px outset var(--backgroundColor);
+  }
+  button{
+    width: 50%;
+  }
+}
